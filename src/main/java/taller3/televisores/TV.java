@@ -62,13 +62,13 @@ public class TV {
 	}
 	
 	public void turnOn(boolean estado) {
-		if (estado = true) {
+		if (estado == true) {
 			this.estado = estado;
 		}
 	}
 	
 	public void turnOff(boolean estado) {
-		if (estado = false) {
+		if (estado == false) {
 			this.estado = estado;
 		}
 	}
