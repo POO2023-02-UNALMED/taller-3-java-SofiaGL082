@@ -9,6 +9,10 @@ public class TV {
 	private Control control;
 	private static int numTV;
 	
+	public void enlazar(Control control) {
+		this.control = control;
+	}
+	
 	public TV(Marca marca, boolean estado) {
 		this.marca = marca;
 		this.estado = estado;
