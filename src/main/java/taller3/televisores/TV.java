@@ -19,11 +19,13 @@ public class TV {
 		this.marca = marca;
 	}
 	public Marca getMarca() {
-		return marca;
+		return this.marca;
 	}
 	
 	public void setCanal(int canal) {
-		this.canal = canal;
+		if (estado == true && canal >= 1 && canal <= 120) {
+			this.canal = canal;
+		}
 	}
 	public int getCanal() {
 		return canal;
@@ -37,7 +39,9 @@ public class TV {
 	}
 	
 	public void setVolumen(int volumen) {
-		this.volumen = volumen;
+		if (estado == true && volumen >= 0 && volumen <= 7) {
+			this.volumen = volumen;
+		}
 	}
 	public int getVolumen() {
 		return volumen;
@@ -70,27 +74,19 @@ public class TV {
 	}
 	
 	public void canalUp() {
-		if (estado == true && canal >= 1 && canal < 120) {
-			canal++;
-		}
+		this.setCanal(this.canal + 1);
 	}
 	
 	public void canalDown() {
-		if (estado == true && canal > 1 && canal <= 120) {
-			canal--;
-		}
+		this.setCanal(canal - 1);
 	}
 	
 	public void volumenUp() {
-		if (estado == true && volumen >= 0 && volumen < 7) {
-			volumen++;
-		}
+		this.setVolumen(volumen + 1);
 	}
 	
 	public void volumenDown() {
-		if (estado == true && volumen >0 && volumen <= 120) {
-			volumen--;
-		}
+		this.setVolumen(volumen - 1);
 	}
 	
 
