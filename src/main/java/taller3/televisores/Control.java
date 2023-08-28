@@ -5,6 +5,7 @@ public class Control {
 	
 	public void enlazar(TV televisor) {
 		this.tv = televisor;
+		tv.setControl(this);
 	}
 	
 	public void setTv(TV tv) {
@@ -12,15 +13,15 @@ public class Control {
 	}
 	
 	public TV getTv() {
-		return tv;
+		return this.tv;
 	}
 	
 	public void turnOn() {
-		this.tv.turnOn(true);
+		this.tv.turnOn();
 	}
 	
 	public void turnOff() {
-		this.tv.turnOff(false);
+		this.tv.turnOff();
 	}
 	
 	public void canalUp() {
